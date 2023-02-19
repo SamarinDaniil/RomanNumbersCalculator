@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RomanNumbersCalculator.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
+        x:Class="RomanNumbersCalculator.Views.MainWindow"
+		Height="500"
+		Width="500"
+		Background="LightYellow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RomanNumbersCalculator">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Grid ColumnDefinitions="1*" RowDefinitions="1*,4*" Margin="4">
+		<StackPanel Grid.Row="0" Grid.Column="0">
+			<TextBlock FontSize="45" Height="50" > | </TextBlock>
+		</StackPanel>
+		<Grid ColumnDefinitions="3*,1*" RowDefinitions="1*" Grid.Row="1" Grid.Column="0">
+			<Grid ColumnDefinitions="1*,1*,1*" RowDefinitions="1*,1*,1*,1*" Grid.Row="0" Grid.Column="0">
+				<StackPanel Grid.Row="0" Grid.Column="0" Margin="2">
+					<Button Height="55" Width="45">I</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="0" Grid.Column="1" Margin="2">
+					<Button Height="55" Width="45">C</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="0" Grid.Column="2" Margin="2">
+					<Button Height="55" Width="45">+</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="1" Grid.Column="0" Margin="2">
+					<Button Height="55" Width="45">V</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="1" Grid.Column="1" Margin="2">
+					<Button Height="55" Width="45">D</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="1" Grid.Column="2" Margin="2">
+					<Button Height="55" Width="45">-</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="2" Grid.Column="0" Margin="2">
+					<Button Height="55" Width="45">X</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="2" Grid.Column="1" Margin="2">
+					<Button Height="55" Width="45">M</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="2" Grid.Column="2" Margin="2">
+					<Button Height="55" Width="45">*</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="3" Grid.Column="0" Margin="2">
+					<Button Height="55" Width="45">L</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="3" Grid.Column="1" Margin="2">
+					<Button Height="55" Width="45">CE</Button>
+				</StackPanel>
+				<StackPanel Grid.Row="3" Grid.Column="2" Margin="2">
+					<Button Height="55" Width="45">/</Button>
+				</StackPanel>
+			</Grid>
+			<Button Height="235" Width="50" Grid.Row="0" Grid.Column="1">=</Button>
+		</Grid>
+	</Grid>
+</Window>
